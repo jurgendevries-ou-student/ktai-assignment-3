@@ -8590,7 +8590,7 @@ None
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [23]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [29]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Logistic regression model</span>
@@ -8607,7 +8607,7 @@ None
 <span class="k">def</span><span class="w"> </span><span class="nf">test_logistic_regression</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">title</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'Statistics: </span><span class="si">{</span><span class="n">title</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">'accuracy: </span><span class="si">{:5.4f}</span><span class="s1">'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_true</span><span class="o">=</span><span class="n">y</span><span class="p">,</span> <span class="n">y_pred</span><span class="o">=</span><span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X</span><span class="o">=</span><span class="n">X</span><span class="o">.</span><span class="n">values</span><span class="p">))))</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">'precision: </span><span class="si">{:5.4f}</span><span class="s1">'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">precision_score</span><span class="p">(</span><span class="n">y_true</span><span class="o">=</span><span class="n">y</span><span class="p">,</span> <span class="n">y_pred</span><span class="o">=</span><span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X</span><span class="o">=</span><span class="n">X</span><span class="o">.</span><span class="n">values</span><span class="p">),</span> <span class="n">average</span><span class="o">=</span><span class="s1">'micro'</span><span class="p">)))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">'precision: </span><span class="si">{:5.4f}</span><span class="s1">'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">precision_score</span><span class="p">(</span><span class="n">y_true</span><span class="o">=</span><span class="n">y</span><span class="p">,</span> <span class="n">y_pred</span><span class="o">=</span><span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X</span><span class="o">=</span><span class="n">X</span><span class="o">.</span><span class="n">values</span><span class="p">),</span> <span class="n">average</span><span class="o">=</span><span class="s1">'weighted'</span><span class="p">)))</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">'recall: </span><span class="si">{:5.4f}</span><span class="s1">'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">recall_score</span><span class="p">(</span><span class="n">average</span><span class="o">=</span><span class="s1">'weighted'</span><span class="p">,</span> <span class="n">y_true</span><span class="o">=</span><span class="n">y</span><span class="p">,</span> <span class="n">y_pred</span><span class="o">=</span><span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X</span><span class="o">=</span><span class="n">X</span><span class="o">.</span><span class="n">values</span><span class="p">))))</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">'f1: </span><span class="si">{:5.4f}</span><span class="s1">'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">f1_score</span><span class="p">(</span><span class="n">average</span><span class="o">=</span><span class="s1">'weighted'</span><span class="p">,</span> <span class="n">y_true</span><span class="o">=</span><span class="n">y</span><span class="p">,</span> <span class="n">y_pred</span><span class="o">=</span><span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X</span><span class="o">=</span><span class="n">X</span><span class="o">.</span><span class="n">values</span><span class="p">))))</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">''</span><span class="p">)</span>
@@ -8667,21 +8667,21 @@ None
 model fit in 295 iterations
 Statistics: Training
 accuracy: 0.6649
-precision: 0.6649
+precision: 0.7010
 recall: 0.6649
 f1: 0.6565
 
 
 Statistics: Validation
 accuracy: 0.5662
-precision: 0.5662
+precision: 0.6701
 recall: 0.5662
 f1: 0.5489
 
 
 Statistics: Test
 accuracy: 0.5606
-precision: 0.5606
+precision: 0.5891
 recall: 0.5606
 f1: 0.5362
 
@@ -8694,7 +8694,9 @@ Normalized results
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
-<pre>C:\SD\anaconda333\envs\ktai-assignment-3\Lib\site-packages\sklearn\metrics\_classification.py:1497: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
+<pre>C:\SD\anaconda333\envs\ktai-assignment-3\Lib\site-packages\sklearn\metrics\_classification.py:1497: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+C:\SD\anaconda333\envs\ktai-assignment-3\Lib\site-packages\sklearn\metrics\_classification.py:1497: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
   _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
 </pre>
 </div>
@@ -8705,45 +8707,59 @@ Normalized results
 <pre>model fit in 295 iterations
 Statistics: Training
 accuracy: 0.8536
-precision: 0.8536
+precision: 0.8608
 recall: 0.8536
 f1: 0.8523
 
 
 Statistics: Validation
 accuracy: 0.7941
-precision: 0.7941
+precision: 0.8402
 recall: 0.7941
 f1: 0.7980
 
 
 Statistics: Test
 accuracy: 0.8485
-precision: 0.8485
+precision: 0.8525
 recall: 0.8485
 f1: 0.8317
 
 ---------------------------------------------
 
 Normalized including tilt results
-model fit in 295 iterations
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
+<pre>C:\SD\anaconda333\envs\ktai-assignment-3\Lib\site-packages\sklearn\metrics\_classification.py:1497: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>model fit in 295 iterations
 Statistics: Training
 accuracy: 0.8652
-precision: 0.8652
+precision: 0.8727
 recall: 0.8652
 f1: 0.8647
 
 
 Statistics: Validation
 accuracy: 0.8015
-precision: 0.8015
+precision: 0.8422
 recall: 0.8015
 f1: 0.8056
 
 
 Statistics: Test
 accuracy: 0.8485
-precision: 0.8485
+precision: 0.8687
 recall: 0.8485
 f1: 0.8421
 
@@ -8753,24 +8769,32 @@ Normalized including tilt and mirror results
 model fit in 295 iterations
 Statistics: Training
 accuracy: 0.8644
-precision: 0.8644
+precision: 0.8721
 recall: 0.8644
 f1: 0.8639
 
 
 Statistics: Validation
 accuracy: 0.8088
-precision: 0.8088
+precision: 0.8414
 recall: 0.8088
 f1: 0.8111
 
 
 Statistics: Test
 accuracy: 0.8485
-precision: 0.8485
+precision: 0.8558
 recall: 0.8485
 f1: 0.8361
 
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
+<pre>C:\SD\anaconda333\envs\ktai-assignment-3\Lib\site-packages\sklearn\metrics\_classification.py:1497: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
 </pre>
 </div>
 </div>
@@ -8792,7 +8816,7 @@ f1: 0.8361
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [24]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [30]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># test random forest model</span>
@@ -8821,7 +8845,7 @@ f1: 0.8361
     <span class="c1"># y_pred = model.predict_proba(X_test)[:,1]</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'Statistics: </span><span class="si">{</span><span class="n">title</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">'accuracy: </span><span class="si">{:5.4f}</span><span class="s1">'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_true</span><span class="o">=</span><span class="n">y</span><span class="p">,</span> <span class="n">y_pred</span><span class="o">=</span><span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X</span><span class="o">=</span><span class="n">X</span><span class="p">))))</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">'precision: </span><span class="si">{:5.4f}</span><span class="s1">'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">precision_score</span><span class="p">(</span><span class="n">y_true</span><span class="o">=</span><span class="n">y</span><span class="p">,</span> <span class="n">y_pred</span><span class="o">=</span><span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X</span><span class="o">=</span><span class="n">X</span><span class="p">),</span> <span class="n">average</span><span class="o">=</span><span class="s1">'micro'</span><span class="p">)))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">'precision: </span><span class="si">{:5.4f}</span><span class="s1">'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">precision_score</span><span class="p">(</span><span class="n">y_true</span><span class="o">=</span><span class="n">y</span><span class="p">,</span> <span class="n">y_pred</span><span class="o">=</span><span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X</span><span class="o">=</span><span class="n">X</span><span class="p">),</span> <span class="n">average</span><span class="o">=</span><span class="s1">'weighted'</span><span class="p">)))</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">'recall: </span><span class="si">{:5.4f}</span><span class="s1">'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">recall_score</span><span class="p">(</span><span class="n">average</span><span class="o">=</span><span class="s1">'weighted'</span><span class="p">,</span> <span class="n">y_true</span><span class="o">=</span><span class="n">y</span><span class="p">,</span> <span class="n">y_pred</span><span class="o">=</span><span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X</span><span class="o">=</span><span class="n">X</span><span class="p">))))</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">'f1: </span><span class="si">{:5.4f}</span><span class="s1">'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">f1_score</span><span class="p">(</span><span class="n">average</span><span class="o">=</span><span class="s1">'weighted'</span><span class="p">,</span> <span class="n">y_true</span><span class="o">=</span><span class="n">y</span><span class="p">,</span> <span class="n">y_pred</span><span class="o">=</span><span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X</span><span class="o">=</span><span class="n">X</span><span class="p">))))</span>
     
@@ -8878,19 +8902,38 @@ f1: 0.8361
 <pre>Raw data
 Statistics: Training
 accuracy: 0.8837
-precision: 0.8837
+precision: 0.8897
 recall: 0.8837
 f1: 0.8827
 
 Statistics: Validation
 accuracy: 0.6029
-precision: 0.6029
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
+<pre>C:\SD\anaconda333\envs\ktai-assignment-3\Lib\site-packages\sklearn\metrics\_classification.py:1497: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>precision: 0.6501
 recall: 0.6029
 f1: 0.5787
 
 Statistics: Test
 accuracy: 0.6818
-precision: 0.6818
+precision: 0.7657
+recall: 0.6818
+f1: 0.6746
+---------------------------------------------
+
+Normalized data
 </pre>
 </div>
 </div>
@@ -8905,54 +8948,69 @@ precision: 0.6818
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>recall: 0.6818
-f1: 0.6746
----------------------------------------------
-
-Normalized data
-Statistics: Training
+<pre>Statistics: Training
 accuracy: 0.8921
-precision: 0.8921
+precision: 0.9010
 recall: 0.8921
 f1: 0.8936
 
 Statistics: Validation
 accuracy: 0.8015
-precision: 0.8015
+precision: 0.8392
 recall: 0.8015
 f1: 0.8048
 
 Statistics: Test
 accuracy: 0.7727
-precision: 0.7727
-recall: 0.7727
+precision: 0.8034
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
+<pre>C:\SD\anaconda333\envs\ktai-assignment-3\Lib\site-packages\sklearn\metrics\_classification.py:1497: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>recall: 0.7727
 f1: 0.7566
 ---------------------------------------------
 
 Normalized including tilt data
 Statistics: Training
 accuracy: 0.8960
-precision: 0.8960
+precision: 0.9057
 recall: 0.8960
 f1: 0.8977
 
 Statistics: Validation
 accuracy: 0.8015
-precision: 0.8015
+precision: 0.8361
 recall: 0.8015
 f1: 0.8013
 
 Statistics: Test
 accuracy: 0.7879
-precision: 0.7879
+precision: 0.8402
 recall: 0.7879
+f1: 0.7900
+---------------------------------------------
+
+Normalized including tilt and mirror data
 </pre>
 </div>
 </div>
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
-<pre>C:\SD\anaconda333\envs\ktai-assignment-3\Lib\site-packages\sklearn\metrics\_classification.py:1497: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
+<pre>C:\SD\anaconda333\envs\ktai-assignment-3\Lib\site-packages\sklearn\metrics\_classification.py:1497: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+C:\SD\anaconda333\envs\ktai-assignment-3\Lib\site-packages\sklearn\metrics\_classification.py:1497: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
   _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
 </pre>
 </div>
@@ -8960,25 +9018,21 @@ recall: 0.7879
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>f1: 0.7900
----------------------------------------------
-
-Normalized including tilt and mirror data
-Statistics: Training
+<pre>Statistics: Training
 accuracy: 0.9099
-precision: 0.9099
+precision: 0.9158
 recall: 0.9099
 f1: 0.9108
 
 Statistics: Validation
 accuracy: 0.8382
-precision: 0.8382
+precision: 0.8623
 recall: 0.8382
 f1: 0.8389
 
 Statistics: Test
 accuracy: 0.7727
-precision: 0.7727
+precision: 0.8457
 recall: 0.7727
 f1: 0.7728
 </pre>
@@ -8987,7 +9041,9 @@ f1: 0.7728
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
-<pre>C:\SD\anaconda333\envs\ktai-assignment-3\Lib\site-packages\sklearn\metrics\_classification.py:1497: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
+<pre>C:\SD\anaconda333\envs\ktai-assignment-3\Lib\site-packages\sklearn\metrics\_classification.py:1497: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+C:\SD\anaconda333\envs\ktai-assignment-3\Lib\site-packages\sklearn\metrics\_classification.py:1497: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
   _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
 </pre>
 </div>
@@ -9010,7 +9066,7 @@ f1: 0.7728
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [25]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [31]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.neural_network</span><span class="w"> </span><span class="kn">import</span> <span class="n">MLPClassifier</span>
@@ -9029,7 +9085,7 @@ f1: 0.7728
 <span class="k">def</span><span class="w"> </span><span class="nf">test_nn_model</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">title</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'Statistics: </span><span class="si">{</span><span class="n">title</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">'accuracy: </span><span class="si">{:5.4f}</span><span class="s1">'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_true</span><span class="o">=</span><span class="n">y</span><span class="p">,</span> <span class="n">y_pred</span><span class="o">=</span><span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X</span><span class="o">=</span><span class="n">X</span><span class="p">))))</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">'precision: </span><span class="si">{:5.4f}</span><span class="s1">'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">precision_score</span><span class="p">(</span><span class="n">y_true</span><span class="o">=</span><span class="n">y</span><span class="p">,</span> <span class="n">y_pred</span><span class="o">=</span><span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X</span><span class="o">=</span><span class="n">X</span><span class="p">),</span> <span class="n">average</span><span class="o">=</span><span class="s1">'micro'</span><span class="p">)))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">'precision: </span><span class="si">{:5.4f}</span><span class="s1">'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">precision_score</span><span class="p">(</span><span class="n">y_true</span><span class="o">=</span><span class="n">y</span><span class="p">,</span> <span class="n">y_pred</span><span class="o">=</span><span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X</span><span class="o">=</span><span class="n">X</span><span class="p">),</span> <span class="n">average</span><span class="o">=</span><span class="s1">'weighted'</span><span class="p">)))</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">'recall: </span><span class="si">{:5.4f}</span><span class="s1">'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">recall_score</span><span class="p">(</span><span class="n">average</span><span class="o">=</span><span class="s1">'weighted'</span><span class="p">,</span> <span class="n">y_true</span><span class="o">=</span><span class="n">y</span><span class="p">,</span> <span class="n">y_pred</span><span class="o">=</span><span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X</span><span class="o">=</span><span class="n">X</span><span class="p">))))</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">'f1: </span><span class="si">{:5.4f}</span><span class="s1">'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">f1_score</span><span class="p">(</span><span class="n">average</span><span class="o">=</span><span class="s1">'weighted'</span><span class="p">,</span> <span class="n">y_true</span><span class="o">=</span><span class="n">y</span><span class="p">,</span> <span class="n">y_pred</span><span class="o">=</span><span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X</span><span class="o">=</span><span class="n">X</span><span class="p">))))</span>
 
@@ -9084,19 +9140,19 @@ f1: 0.7728
 <pre>Standard data:
 Statistics: Training
 accuracy: 0.9052
-precision: 0.9052
+precision: 0.9089
 recall: 0.9052
 f1: 0.9057
 
 Statistics: Validation
 accuracy: 0.7132
-precision: 0.7132
+precision: 0.7902
 recall: 0.7132
 f1: 0.7209
 
 Statistics: Test
 accuracy: 0.7273
-precision: 0.7273
+precision: 0.7957
 recall: 0.7273
 f1: 0.7329
 ---------------------------------------------
@@ -9108,7 +9164,9 @@ Normalized data:
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
-<pre>C:\SD\anaconda333\envs\ktai-assignment-3\Lib\site-packages\sklearn\metrics\_classification.py:1497: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
+<pre>C:\SD\anaconda333\envs\ktai-assignment-3\Lib\site-packages\sklearn\metrics\_classification.py:1497: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+C:\SD\anaconda333\envs\ktai-assignment-3\Lib\site-packages\sklearn\metrics\_classification.py:1497: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
   _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
 </pre>
 </div>
@@ -9118,19 +9176,19 @@ Normalized data:
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
 <pre>Statistics: Training
 accuracy: 0.9653
-precision: 0.9653
+precision: 0.9664
 recall: 0.9653
 f1: 0.9655
 
 Statistics: Validation
 accuracy: 0.8088
-precision: 0.8088
+precision: 0.8174
 recall: 0.8088
 f1: 0.7984
 
 Statistics: Test
 accuracy: 0.8485
-precision: 0.8485
+precision: 0.8861
 recall: 0.8485
 f1: 0.8503
 ---------------------------------------------
@@ -9142,7 +9200,9 @@ Normalized including tilt data:
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
-<pre>C:\SD\anaconda333\envs\ktai-assignment-3\Lib\site-packages\sklearn\metrics\_classification.py:1497: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
+<pre>C:\SD\anaconda333\envs\ktai-assignment-3\Lib\site-packages\sklearn\metrics\_classification.py:1497: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+C:\SD\anaconda333\envs\ktai-assignment-3\Lib\site-packages\sklearn\metrics\_classification.py:1497: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
   _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
 </pre>
 </div>
@@ -9152,19 +9212,19 @@ Normalized including tilt data:
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
 <pre>Statistics: Training
 accuracy: 0.9622
-precision: 0.9622
+precision: 0.9632
 recall: 0.9622
 f1: 0.9624
 
 Statistics: Validation
 accuracy: 0.8162
-precision: 0.8162
+precision: 0.8509
 recall: 0.8162
 f1: 0.8221
 
 Statistics: Test
 accuracy: 0.8788
-precision: 0.8788
+precision: 0.9119
 recall: 0.8788
 f1: 0.8702
 ---------------------------------------------
@@ -9172,19 +9232,19 @@ f1: 0.8702
 Normalized including tilt data and mirror:
 Statistics: Training
 accuracy: 0.9884
-precision: 0.9884
+precision: 0.9887
 recall: 0.9884
 f1: 0.9885
 
 Statistics: Validation
 accuracy: 0.8456
-precision: 0.8456
+precision: 0.8672
 recall: 0.8456
 f1: 0.8457
 
 Statistics: Test
 accuracy: 0.8182
-precision: 0.8182
+precision: 0.8672
 recall: 0.8182
 f1: 0.8193
 </pre>
@@ -9773,14 +9833,14 @@ CV f1_weighted (mean): 0.886
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [27]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [32]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># test on validation and test data</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">test_svc_model</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">title</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'Statistics: </span><span class="si">{</span><span class="n">title</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">'accuracy: </span><span class="si">{:5.4f}</span><span class="s1">'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_true</span><span class="o">=</span><span class="n">y</span><span class="p">,</span> <span class="n">y_pred</span><span class="o">=</span><span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X</span><span class="o">=</span><span class="n">X</span><span class="p">))))</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">'precision: </span><span class="si">{:5.4f}</span><span class="s1">'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">precision_score</span><span class="p">(</span><span class="n">y_true</span><span class="o">=</span><span class="n">y</span><span class="p">,</span> <span class="n">y_pred</span><span class="o">=</span><span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X</span><span class="o">=</span><span class="n">X</span><span class="p">),</span> <span class="n">average</span><span class="o">=</span><span class="s1">'micro'</span><span class="p">)))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">'precision: </span><span class="si">{:5.4f}</span><span class="s1">'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">precision_score</span><span class="p">(</span><span class="n">y_true</span><span class="o">=</span><span class="n">y</span><span class="p">,</span> <span class="n">y_pred</span><span class="o">=</span><span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X</span><span class="o">=</span><span class="n">X</span><span class="p">),</span> <span class="n">average</span><span class="o">=</span><span class="s1">'weighted'</span><span class="p">)))</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">'recall: </span><span class="si">{:5.4f}</span><span class="s1">'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">recall_score</span><span class="p">(</span><span class="n">average</span><span class="o">=</span><span class="s1">'weighted'</span><span class="p">,</span> <span class="n">y_true</span><span class="o">=</span><span class="n">y</span><span class="p">,</span> <span class="n">y_pred</span><span class="o">=</span><span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X</span><span class="o">=</span><span class="n">X</span><span class="p">))))</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">'f1: </span><span class="si">{:5.4f}</span><span class="s1">'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">f1_score</span><span class="p">(</span><span class="n">average</span><span class="o">=</span><span class="s1">'weighted'</span><span class="p">,</span> <span class="n">y_true</span><span class="o">=</span><span class="n">y</span><span class="p">,</span> <span class="n">y_pred</span><span class="o">=</span><span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X</span><span class="o">=</span><span class="n">X</span><span class="p">))))</span>
     <span class="nb">print</span><span class="p">()</span>
@@ -9825,14 +9885,14 @@ CV f1_weighted (mean): 0.886
 <pre>Standard data:
 Statistics: Validation
 accuracy: 0.7868
-precision: 0.7868
+precision: 0.8230
 recall: 0.7868
 f1: 0.7896
 
 
 Statistics: Test
 accuracy: 0.7424
-precision: 0.7424
+precision: 0.8220
 recall: 0.7424
 f1: 0.7389
 
@@ -9841,13 +9901,17 @@ f1: 0.7389
 Normalized data:
 Statistics: Validation
 accuracy: 0.8456
+precision: 0.8669
+recall: 0.8456
 </pre>
 </div>
 </div>
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
-<pre>C:\SD\anaconda333\envs\ktai-assignment-3\Lib\site-packages\sklearn\metrics\_classification.py:1497: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
+<pre>C:\SD\anaconda333\envs\ktai-assignment-3\Lib\site-packages\sklearn\metrics\_classification.py:1497: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+C:\SD\anaconda333\envs\ktai-assignment-3\Lib\site-packages\sklearn\metrics\_classification.py:1497: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
   _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
 </pre>
 </div>
@@ -9855,14 +9919,12 @@ accuracy: 0.8456
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>precision: 0.8456
-recall: 0.8456
-f1: 0.8452
+<pre>f1: 0.8452
 
 
 Statistics: Test
 accuracy: 0.8636
-precision: 0.8636
+precision: 0.9081
 recall: 0.8636
 f1: 0.8623
 
@@ -9871,14 +9933,14 @@ f1: 0.8623
 Normalized including tilt data:
 Statistics: Validation
 accuracy: 0.8015
-precision: 0.8015
+precision: 0.8296
 recall: 0.8015
 f1: 0.8050
 
 
 Statistics: Test
 accuracy: 0.8636
-precision: 0.8636
+precision: 0.8914
 recall: 0.8636
 f1: 0.8580
 
@@ -9887,14 +9949,14 @@ f1: 0.8580
 Normalized including tilt and mirror data:
 Statistics: Validation
 accuracy: 0.8309
-precision: 0.8309
+precision: 0.8546
 recall: 0.8309
 f1: 0.8321
 
 
 Statistics: Test
 accuracy: 0.8636
-precision: 0.8636
+precision: 0.9028
 recall: 0.8636
 f1: 0.8604
 
