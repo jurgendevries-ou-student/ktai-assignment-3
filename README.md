@@ -1,8 +1,10 @@
 # ktai-assignment-3 
 Henry Koers, Ton Hellings, Jurgen de Vries
 ## File list
-- train.ipynb / train.html
-- live-prediction.ipynb / live-prediction.html
+- train.html
+- live-prediction.html
+- test/train.ipynb
+- test/live-prediction.ipynb
 - report.pdf
 - requirements.txt
 - readme.md
@@ -16,6 +18,7 @@ Our used data is available in the github repository and contains the American Si
 
 ## Data
 The data is not included in the zip folder, as the zip would exceed the limit of 25MB. It is available on https://github.com/jurgendevries-ou-student/ktai-assignment-3, just like all other files including most of the ones mentioned here.
+To run the notebooks, please download the data/ folder and position it in the same folder as the test/ folder.
 
 ## Versions of Python packages
 Since Mediapipe requires numpy <= 2.0.0 specific versions of other packages are needed, see requirements.txt
