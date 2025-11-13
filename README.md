@@ -1,13 +1,21 @@
-# ktai-assignment-3
+# ktai-assignment-3 
+Henry Koers, Ton Hellings, Jurgen de Vries
+## File list
+- train.ipynb / train.html
+- live-prediction.ipynb / live-prediction.html
+- report.pdf
+- requirements.txt
+- readme.md
+
 ## Experiments
 - train.ipynb contains all of our experiments.
 Our used data is available in the github repository and contains the American Sign language dataset from https://public.roboflow.com/object-detection/american-sign-language-letters/1.
 
 ## Live prediction application
-- live-prediction.ipynb contains our application for live prediction on webcam and recording letters to refine word prediction
+- live-prediction.ipynb contains our application for live prediction on webcam and recording letters, including an algorithm to refine word prediction
 
-## data
-The data is not included in the zip folder, because it became too big. It is available on https://github.com/jurgendevries-ou-student/ktai-assignment-3
+## Data
+The data is not included in the zip folder, as the zip would exceed the limit of 25MB. It is available on https://github.com/jurgendevries-ou-student/ktai-assignment-3, just like all other files including most of the ones mentioned here.
 
-## Versions
+## Versions of Python packages
 Since Mediapipe requires numpy <= 2.0.0 specific versions of other packages are needed, see requirements.txt
