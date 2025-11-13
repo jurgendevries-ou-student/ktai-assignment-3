@@ -5,20 +5,24 @@ Henry Koers, Ton Hellings, Jurgen de Vries
 - live-prediction.html
 - test/train.ipynb
 - test/live-prediction.ipynb
+- test/hand-landmarker.task
 - report.pdf
 - requirements.txt
 - readme.md
 
 ## Experiments
-- train.ipynb contains all of our experiments.
-Our used data is available in the github repository and contains the American Sign language dataset from https://public.roboflow.com/object-detection/american-sign-language-letters/1.
+- train.ipynb contains all of our experiments. These are also reflected in train.html.
+Our used data is available in the github repository and contains the American Sign language dataset from https://public.roboflow.com/object-detection/american-sign-language-letters/1. 
 
 ## Live prediction application
-- live-prediction.ipynb contains our application for live prediction on webcam and recording letters, including an algorithm to refine word prediction
+- live-prediction.ipynb contains our application for live prediction on webcam and recording letters, including an algorithm to refine word prediction. This is also reflected in live-prediction.html.
 
 ## Data
 The data is not included in the zip folder, as the zip would exceed the limit of 25MB. It is available on https://github.com/jurgendevries-ou-student/ktai-assignment-3, just like all other files including most of the ones mentioned here.
 To run the notebooks, please download the data/ folder and position it in the same folder as the test/ folder.
+
+## Hand Landmarker
+Google's MediaPipe landmarker is needed to run the notebooks. It is available in hand-landmarker.task.
 
 ## Versions of Python packages
 Since Mediapipe requires numpy <= 2.0.0 specific versions of other packages are needed, see requirements.txt
